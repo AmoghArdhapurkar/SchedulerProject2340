@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <EditText
+        android:id="@+id/editTextAssignmentTitle"
+        android:layout_below="@id/assignmentTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Title" />
+
+    <TextView
+        android:id="@+id/assignmentTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="@string/assignmentdeets"
+        android:textColor="@color/black"
+        android:textSize="23sp" />
+
+    <EditText
+        android:id="@+id/editTextAssignmentDueDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextAssignmentTitle"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="16dp"
+        android:hint="Due Date MM/DD/YYYY" />
+
+    <EditText
+        android:id="@+id/editTextAssignmentAssociatedClass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextAssignmentDueDate"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Associated Class" />
+
+    <Button
+        android:id="@+id/buttonSaveAssignment"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/editTextAssignmentAssociatedClass"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textSize="25sp"
+        android:backgroundTint="@color/lightpink"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:text="@string/save_assignment" />
+    <Button
+        android:id="@+id/buttonEditAssignment"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/buttonSaveAssignment"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textSize="25sp"
+        android:backgroundTint="@color/lightorange"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:text="Edit Assignment" />
+
+    <Button
+        android:id="@+id/buttonDeleteAssignment"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/buttonEditAssignment"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/skyblue"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:text="Delete Assignment" />
+    <Button
+        android:id="@+id/sortButtonDueDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/editTextAssignmentTitle"
+        android:layout_below="@id/buttonDeleteAssignment"
+        android:layout_marginTop="20dp"
+        android:text="Sort Due Date" />
+    <Button
+        android:id="@+id/backButton"
+        android:layout_marginStart="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonDeleteAssignment"
+        android:layout_marginTop="20dp"
+        android:text="Back" />
+
+    <ListView
+        android:id="@+id/listViewAssignments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/backButton"
+        android:choiceMode="singleChoice"
+        android:layout_marginTop="16dp" />
+
+</RelativeLayout>
+

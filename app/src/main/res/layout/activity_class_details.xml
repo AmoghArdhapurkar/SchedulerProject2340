@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/classTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="@string/classdeets"
+        android:textColor="@color/black"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/editTextCourseName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/classTitle"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:hint="@string/course_name" />
+
+    <EditText
+        android:id="@+id/editTextTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextCourseName"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/time" />
+
+    <EditText
+        android:id="@+id/editTextInstructor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextTime"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/instructor" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/editTextInstructor"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textSize="25sp"
+        android:backgroundTint="@color/lightpink"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:text="@string/save_class" />
+    <Button
+        android:id="@+id/buttonEditClass"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/buttonSave"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textSize="25sp"
+        android:backgroundTint="@color/lightorange"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:text="@string/edit_class" />
+
+    <Button
+        android:id="@+id/buttonDelete"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/buttonEditClass"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textSize="25sp"
+        android:backgroundTint="@color/skyblue"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:text="@string/delete_class" />
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonDelete"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:text="Back" />
+    <Button
+        android:id="@+id/sortButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/editTextInstructor"
+        android:layout_below="@id/buttonDelete"
+        android:layout_marginTop="20dp"
+        android:text="Sort Time" />
+
+    <ListView
+        android:id="@+id/listViewClasses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:choiceMode="singleChoice"
+        android:layout_below="@id/backButton"
+        android:layout_marginTop="16dp" />
+
+</RelativeLayout>

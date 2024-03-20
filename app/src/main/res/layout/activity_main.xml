@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/white">
+
+
+    <!-- Class Schedule Section -->
+
+    <!-- Button to Navigate to Class Details -->
+
+    <!-- Assignment Section -->
+    <TextView
+        android:id="@+id/textViewClassSchedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="150dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="@string/the_class_schedule"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/buttonClassDetails"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/textViewClassSchedule"
+        android:layout_marginTop="22dp"
+        android:layout_marginStart="40dp"
+        android:backgroundTint="@color/purple_200"
+        android:text="@string/class_details"
+        android:textColor="@color/white" />
+
+    <!-- Button to Navigate to Assignment Details -->
+
+    <TextView
+        android:id="@+id/textViewAssignments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="235dp"
+        android:layout_marginTop="150dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="@string/the_assignments"
+        android:textColor="@color/black"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/buttonAssignmentDetails"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:text="@string/assignment_details"
+        android:layout_below="@+id/textViewAssignments"
+        android:layout_marginTop="22dp"
+        android:layout_marginStart="220dp"
+        android:backgroundTint="@color/lightorange"
+        android:textColor="@color/white"/>
+
+    <!-- Exam Section -->
+
+    <!-- Button to Navigate to Exam Details -->
+
+    <!-- To-Do List Section -->
+
+    <TextView
+        android:id="@+id/textViewExams"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="550dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="@string/exams_exams"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@id/buttonExamDetails"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="380dp"
+        android:layout_marginBottom="-678dp"
+        android:backgroundTint="@color/lightpink"
+        android:text="@string/exam_details"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/textViewTodoList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/to_do_thelist"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:layout_marginTop="550dp"
+        android:layout_marginStart="240dp" />
+
+
+    <!-- Button to Navigate to To-Do List -->
+
+    <TextView
+        android:id="@+id/theapp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="@string/theapp"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-smallcaps"
+        android:layout_centerHorizontal="true"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/closing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="640dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="@string/purpose"
+        android:textColor="@color/black"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/buttonTodoList"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="380dp"
+        android:backgroundTint="@color/skyblue"
+        android:text="@string/to_do_list"
+        android:textColor="@color/white" />
+
+
+</RelativeLayout>

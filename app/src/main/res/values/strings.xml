@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">App Redo</string>
+    <string name="assignments">Assignments</string>
+    <string name="exams">Exams</string>
+    <string name="todo_list">Todo List</string>
+    <string name="class_schedule">Class Schedule</string>
+    <string name="to_do_list">To-Do List</string>
+    <string name="to_do_thelist">To-Do List</string>
+    <string name="exam_details">Exam Details</string>
+    <string name="exams_exams">Exams</string>
+    <string name="the_assignments">Assignments</string>
+    <string name="assignment_details">Assignment Details</string>
+    <string name="class_details">Class Details</string>
+    <string name="the_class_schedule">Class Schedule</string>
+    <string name="back">Back</string>
+    <string name="delete_class">Delete Class</string>
+    <string name="edit_class">Edit Class</string>
+    <string name="save_class">Save Class</string>
+    <string name="instructor">Instructor</string>
+    <string name="time">Time  (Military)</string>
+    <string name="course_name">Course Name</string>
+    <string name="theapp">Scheduling Made Easy.</string>
+    <string name="purpose">Created for an easier student life.</string>
+    <string name="assignmentdeets">Create and View Your Assignments!</string>
+    <string name="examdeets">Create and View Your Exams!</string>
+    <string name="tododeets">Create and View Your To Do List!</string>
+    <string name="classdeets">Create and View Your Classes!</string>
+    <string name="save_assignment">save assignment</string>
+
+
+</resources>
