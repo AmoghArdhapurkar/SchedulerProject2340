@@ -24,48 +24,54 @@
         android:layout_marginEnd="20dp"
         android:hint="What do you need to do?" />
 
-    <Button
-        android:id="@+id/buttonAddTask"
-        android:layout_width="300dp"
-        android:layout_height="70dp"
-        android:layout_below="@id/editTextTask"
+    <LinearLayout
+        android:id="@+id/buttonlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:textSize="25sp"
-        android:backgroundTint="@color/lightpink"
         android:layout_centerHorizontal="true"
-        android:textColor="@color/white"
-        android:text="Add Task" />
-    <Button
-        android:id="@+id/buttonEditTask"
-        android:layout_width="300dp"
-        android:layout_height="70dp"
-        android:layout_below="@id/buttonAddTask"
-        android:layout_marginTop="20dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:textSize="25sp"
-        android:backgroundTint="@color/lightorange"
-        android:layout_centerHorizontal="true"
-        android:textColor="@color/white"
-        android:text="Edit Task" />
+        android:layout_below="@id/editTextTask">
 
-    <Button
-        android:id="@+id/buttonDeleteTask"
-        android:layout_width="300dp"
-        android:layout_height="70dp"
-        android:layout_below="@id/buttonEditTask"
-        android:layout_marginTop="20dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:textSize="25sp"
-        android:backgroundTint="@color/skyblue"
-        android:layout_centerHorizontal="true"
-        android:textColor="@color/white"
-        android:text="Delete Task" />
+        <Button
+            android:id="@+id/buttonAddTask"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textSize="25sp"
+            android:backgroundTint="@color/lightpink"
+            android:textColor="@color/white"
+            android:text="@string/save" />
+
+        <Button
+            android:id="@+id/buttonEditTask"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textSize="25sp"
+            android:backgroundTint="@color/lightorange"
+            android:textColor="@color/white"
+            android:text="@string/edit" />
+
+        <Button
+            android:id="@+id/buttonDeleteTask"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textSize="25sp"
+            android:backgroundTint="@color/skyblue"
+            android:textColor="@color/white"
+            android:text="@string/delete" />
+
+    </LinearLayout>
+
     <Button
         android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/buttonDeleteTask"
+        android:layout_below="@id/buttonlayout"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:text="Back" />

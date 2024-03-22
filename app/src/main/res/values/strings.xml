@@ -13,9 +13,9 @@
     <string name="class_details">Class Details</string>
     <string name="the_class_schedule">Class Schedule</string>
     <string name="back">Back</string>
-    <string name="delete_class">Delete Class</string>
-    <string name="edit_class">Edit Class</string>
-    <string name="save_class">Save Class</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="save">Save</string>
     <string name="instructor">Instructor</string>
     <string name="time">Time  (Military)</string>
     <string name="course_name">Course Name</string>

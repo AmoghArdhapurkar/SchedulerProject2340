@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white">
@@ -45,48 +46,55 @@
         android:layout_marginTop="16dp"
         android:hint="@string/instructor" />
 
-    <Button
-        android:id="@+id/buttonSave"
-        android:layout_width="300dp"
-        android:layout_height="70dp"
-        android:layout_below="@id/editTextInstructor"
+    <LinearLayout
+        android:id="@+id/buttonlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:textSize="25sp"
-        android:backgroundTint="@color/lightpink"
         android:layout_centerHorizontal="true"
-        android:textColor="@color/white"
-        android:text="@string/save_class" />
-    <Button
-        android:id="@+id/buttonEditClass"
-        android:layout_width="300dp"
-        android:layout_height="70dp"
-        android:layout_below="@id/buttonSave"
-        android:layout_marginTop="20dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:textSize="25sp"
-        android:backgroundTint="@color/lightorange"
-        android:layout_centerHorizontal="true"
-        android:textColor="@color/white"
-        android:text="@string/edit_class" />
+        android:layout_below="@id/editTextInstructor">
 
-    <Button
-        android:id="@+id/buttonDelete"
-        android:layout_width="300dp"
-        android:layout_height="70dp"
-        android:layout_below="@id/buttonEditClass"
-        android:layout_marginTop="20dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:textSize="25sp"
-        android:backgroundTint="@color/skyblue"
-        android:layout_centerHorizontal="true"
-        android:textColor="@color/white"
-        android:text="@string/delete_class" />
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textSize="25sp"
+            android:backgroundTint="@color/lightpink"
+            android:textColor="@color/white"
+            android:text="@string/save" />
+
+        <Button
+            android:id="@+id/buttonEditClass"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textSize="25sp"
+            android:backgroundTint="@color/lightorange"
+            android:textColor="@color/white"
+            android:text="@string/edit" />
+
+        <Button
+            android:id="@+id/buttonDelete"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textSize="25sp"
+            android:backgroundTint="@color/skyblue"
+            android:textColor="@color/white"
+            android:text="@string/delete" />
+
+    </LinearLayout>
+
+
     <Button
         android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/buttonDelete"
+        android:layout_below="@id/buttonlayout"
         android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
         android:text="Back" />
@@ -95,7 +103,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignRight="@id/editTextInstructor"
-        android:layout_below="@id/buttonDelete"
+        android:layout_below="@id/buttonlayout"
         android:layout_marginTop="20dp"
         android:text="Sort Time" />
 
