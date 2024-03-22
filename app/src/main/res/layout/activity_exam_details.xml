@@ -55,49 +55,54 @@
         android:layout_marginEnd="20dp"
         android:hint="Exam Location" />
 
-    <Button
-        android:id="@+id/buttonSaveExam"
-        android:layout_width="300dp"
-        android:layout_height="70dp"
-        android:layout_below="@id/editTextExamLocation"
+    <LinearLayout
+        android:id="@+id/buttonlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:textSize="25sp"
-        android:backgroundTint="@color/lightpink"
         android:layout_centerHorizontal="true"
-        android:textColor="@color/white"
-        android:text="Save Exam" />
-    <Button
-        android:id="@+id/buttonEditExam"
-        android:layout_width="300dp"
-        android:layout_height="70dp"
-        android:layout_below="@id/buttonSaveExam"
-        android:layout_marginTop="20dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:textSize="25sp"
-        android:backgroundTint="@color/lightorange"
-        android:layout_centerHorizontal="true"
-        android:textColor="@color/white"
-        android:text="Edit Exam" />
+        android:layout_below="@id/editTextExamLocation">
 
-    <Button
-        android:id="@+id/buttonDeleteExam"
-        android:layout_width="300dp"
-        android:layout_height="70dp"
-        android:layout_below="@id/buttonEditExam"
-        android:layout_marginTop="20dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:textSize="25sp"
-        android:backgroundTint="@color/skyblue"
-        android:layout_centerHorizontal="true"
-        android:textColor="@color/white"
-        android:text="Delete Exam" />
+        <Button
+            android:id="@+id/buttonSaveExam"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textSize="25sp"
+            android:backgroundTint="@color/lightpink"
+            android:textColor="@color/white"
+            android:text="@string/save" />
+
+        <Button
+            android:id="@+id/buttonEditExam"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textSize="25sp"
+            android:backgroundTint="@color/lightorange"
+            android:textColor="@color/white"
+            android:text="@string/edit" />
+
+        <Button
+            android:id="@+id/buttonDeleteExam"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textSize="25sp"
+            android:backgroundTint="@color/skyblue"
+            android:textColor="@color/white"
+            android:text="@string/delete" />
+
+    </LinearLayout>
     <Button
         android:id="@+id/sortButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignRight="@id/editTextExamDate"
-        android:layout_below="@id/buttonDeleteExam"
+        android:layout_below="@id/buttonlayout"
         android:layout_marginTop="20dp"
         android:text="Sort Exam Date" />
 
@@ -105,7 +110,7 @@
         android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/buttonDeleteExam"
+        android:layout_below="@id/buttonlayout"
         android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
         android:text="Back" />
