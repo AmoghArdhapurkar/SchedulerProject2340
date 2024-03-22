@@ -37,7 +37,7 @@ public class ClassDetailsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_class_details);
+        setContentView(R.layout.nav_activity_class_details);
 
         sharedPreferences = getSharedPreferences("ClassDetails", Context.MODE_PRIVATE);
         classSet = sharedPreferences.getStringSet("classes", new HashSet<String>());

@@ -42,7 +42,7 @@ public final class AssignmentDetailsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_assignment_details);
+        setContentView(R.layout.nav_activity_assignment_details);
 
         sharedPreferences = getSharedPreferences("AssignmentDetails", Context.MODE_PRIVATE);
         assignmentSet = sharedPreferences.getStringSet("assignments", new HashSet<String>());

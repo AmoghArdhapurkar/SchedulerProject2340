@@ -30,7 +30,7 @@ public class TodoListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_todo_list);
+        setContentView(R.layout.nav_activity_todo_list);
 
         sharedPreferences = getSharedPreferences("TodoList", Context.MODE_PRIVATE);
         taskSet = sharedPreferences.getStringSet("tasks", new HashSet<String>());
