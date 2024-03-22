@@ -4,15 +4,21 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.appredo.MainActivity;
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -55,6 +61,34 @@ public class ExamDetailsActivity extends AppCompatActivity {
 
         examListAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, new ArrayList<>(examSet));
         examListView.setAdapter(examListAdapter);
+
+        //Navigation Drawer Buttons
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                if (item.getItemId() == R.id.nav_classes) {
+                    startActivity(new Intent(ExamDetailsActivity.this, ClassDetailsActivity.class));
+                }
+
+                if (item.getItemId() == R.id.nav_assignments) {
+                    startActivity(new Intent(ExamDetailsActivity.this, AssignmentDetailsActivity.class));
+                }
+
+                if (item.getItemId() == R.id.nav_home) {
+                    startActivity(new Intent(ExamDetailsActivity.this, MainActivity.class));
+                }
+
+                if (item.getItemId() == R.id.nav_todo) {
+                    startActivity(new Intent(ExamDetailsActivity.this, TodoListActivity.class));
+                }
+
+                DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
+                drawerLayout.closeDrawer(GravityCompat.START);
+                return true;
+            }
+        });
 
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
