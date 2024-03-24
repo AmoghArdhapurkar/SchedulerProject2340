@@ -100,24 +100,17 @@
         android:id="@+id/sortButtonDueDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@id/editTextAssignmentTitle"
+        android:layout_centerHorizontal="true"
         android:layout_below="@id/buttonlayout"
         android:layout_marginTop="20dp"
         android:text="Sort Due Date" />
-    <Button
-        android:id="@+id/backButton"
-        android:layout_marginStart="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/buttonlayout"
-        android:layout_marginTop="20dp"
-        android:text="Back" />
+
 
     <ListView
         android:id="@+id/listViewAssignments"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/backButton"
+        android:layout_below="@id/sortButtonDueDate"
         android:choiceMode="singleChoice"
         android:layout_marginTop="16dp" />
 

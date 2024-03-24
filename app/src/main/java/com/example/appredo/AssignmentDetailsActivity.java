@@ -198,13 +198,13 @@ public final class AssignmentDetailsActivity extends AppCompatActivity {
             }
         });
 
-        Button backButton = findViewById(R.id.backButton);
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(AssignmentDetailsActivity.this, MainActivity.class));
-            }
-        });
+//        Button backButton = findViewById(R.id.backButton);
+//        backButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(AssignmentDetailsActivity.this, MainActivity.class));
+//            }
+//        });
 
         ImageView imageView = findViewById(R.id.hamburgerButton);
         imageView.setOnClickListener(new View.OnClickListener(){

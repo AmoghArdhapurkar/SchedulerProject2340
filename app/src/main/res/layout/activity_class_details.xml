@@ -98,19 +98,12 @@
     </LinearLayout>
 
 
-    <Button
-        android:id="@+id/backButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/buttonlayout"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"
-        android:text="Back" />
+
     <Button
         android:id="@+id/sortButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@id/editTextInstructor"
+        android:layout_centerHorizontal="true"
         android:layout_below="@id/buttonlayout"
         android:layout_marginTop="20dp"
         android:text="Sort Time" />
@@ -120,7 +113,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:choiceMode="singleChoice"
-        android:layout_below="@id/backButton"
+        android:layout_below="@id/sortButton"
         android:layout_marginTop="16dp" />
 
 </RelativeLayout>

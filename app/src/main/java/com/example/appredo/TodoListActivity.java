@@ -127,13 +127,13 @@ public class TodoListActivity extends AppCompatActivity {
             }
         });
 
-        Button backButton = findViewById(R.id.backButton);
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(TodoListActivity.this, MainActivity.class));
-            }
-        });
+//        Button backButton = findViewById(R.id.backButton);
+//        backButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(TodoListActivity.this, MainActivity.class));
+//            }
+//        });
 
         ImageView imageView = findViewById(R.id.hamburgerButton);
         imageView.setOnClickListener(new View.OnClickListener(){
