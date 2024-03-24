@@ -53,7 +53,9 @@ public class MainActivity extends AppCompatActivity {
         buttonClassDetails.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, ClassDetailsActivity.class));
+                DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
+                drawerLayout.openDrawer(GravityCompat.START);
+                //startActivity(new Intent(MainActivity.this, ClassDetailsActivity.class));
             }
         });
 
@@ -83,5 +85,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, TodoListActivity.class));
             }
         });
+    }
+
+    public void hamburgerAction(View view) {
+        DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
+        drawerLayout.openDrawer(GravityCompat.START);
     }
 }
