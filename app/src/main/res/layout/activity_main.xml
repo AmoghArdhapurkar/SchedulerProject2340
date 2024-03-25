@@ -20,13 +20,13 @@
     <!-- Assignment Section -->
     <TextView
         android:id="@+id/textViewClassSchedule"
-        android:layout_width="wrap_content"
+        android:layout_width="170dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="120dp"
         android:fontFamily="sans-serif-smallcaps"
         android:text="@string/the_class_schedule"
+        android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp" />
 
@@ -53,10 +53,11 @@
 
     <TextView
         android:id="@+id/textViewAssignments"
-        android:layout_width="wrap_content"
+        android:layout_width="170dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="255dp"
+        android:layout_marginStart="220dp"
         android:layout_marginTop="120dp"
+        android:textAlignment="center"
         android:fontFamily="sans-serif-smallcaps"
         android:text="@string/the_assignments"
         android:textColor="@color/black"
@@ -74,10 +75,11 @@
 
     <TextView
         android:id="@+id/textViewExams"
-        android:layout_width="wrap_content"
+        android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/listofClasses"
-        android:layout_marginStart="86dp"
+        android:layout_marginStart="20dp"
+        android:textAlignment="center"
         android:layout_marginTop="30dp"
         android:fontFamily="sans-serif-smallcaps"
         android:text="@string/exams_exams"
@@ -90,7 +92,7 @@
 
     <TextView
         android:id="@+id/textViewTodoList"
-        android:layout_width="wrap_content"
+        android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/listofAssignments"
         android:layout_marginTop="30dp"
@@ -98,7 +100,8 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         android:fontFamily="sans-serif-smallcaps"
-        android:layout_marginStart="260dp" />
+        android:textAlignment="center"
+        android:layout_marginStart="220dp" />
 
     <ListView
         android:id="@+id/listofTodo"
