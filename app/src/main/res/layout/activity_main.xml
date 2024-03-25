@@ -23,23 +23,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="120dp"
         android:fontFamily="sans-serif-smallcaps"
         android:text="@string/the_class_schedule"
         android:textColor="@color/black"
         android:textSize="20sp" />
 
-    <Button
-        android:id="@+id/buttonClassDetails"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_below="@+id/textViewClassSchedule"
-        android:layout_marginTop="15dp"
+    <ListView
+        android:id="@+id/listofClasses"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_below="@id/textViewClassSchedule"
+        android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
-        android:backgroundTint="@color/purple_200"
-        android:text="@string/class_details"
-        android:textColor="@color/white" />
+
 
     <!-- Button to Navigate to Assignment Details -->
 
@@ -75,9 +73,9 @@
         android:id="@+id/textViewExams"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/buttonClassDetails"
+        android:layout_below="@id/listofClasses"
         android:layout_marginStart="86dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:fontFamily="sans-serif-smallcaps"
         android:text="@string/exams_exams"
         android:textColor="@color/black"
@@ -87,8 +85,9 @@
         android:id="@id/buttonExamDetails"
         android:layout_width="150dp"
         android:layout_height="150dp"
+        android:layout_below="@id/listofClasses"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="380dp"
+        android:layout_marginTop="50dp"
         android:layout_marginBottom="-678dp"
         android:backgroundTint="@color/lightpink"
         android:text="@string/exam_details"
