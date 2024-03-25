@@ -37,9 +37,19 @@
         android:layout_below="@id/textViewClassSchedule"
         android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
+        android:background="@color/purple_200"/>
 
 
     <!-- Button to Navigate to Assignment Details -->
+
+    <ListView
+        android:id="@+id/listofAssignments"
+        android:layout_below="@id/textViewAssignments"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:background="@color/lightorange"/>
 
     <TextView
         android:id="@+id/textViewAssignments"
@@ -52,22 +62,15 @@
         android:textColor="@color/black"
         android:textSize="20sp"/>
 
-    <Button
-        android:id="@+id/buttonAssignmentDetails"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:text="@string/assignment_details"
-        android:layout_below="@+id/textViewAssignments"
-        android:layout_marginTop="15dp"
-        android:layout_marginStart="240dp"
-        android:backgroundTint="@color/lightorange"
-        android:textColor="@color/white"/>
-
     <!-- Exam Section -->
-
-    <!-- Button to Navigate to Exam Details -->
-
-    <!-- To-Do List Section -->
+    <ListView
+        android:id="@+id/listofExams"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_below="@id/textViewExams"
+        android:layout_marginTop="20dp"
+        android:background="@color/lightpink"
+    android:layout_marginStart="20dp" />
 
     <TextView
         android:id="@+id/textViewExams"
@@ -81,28 +84,30 @@
         android:textColor="@color/black"
         android:textSize="20sp" />
 
-    <Button
-        android:id="@id/buttonExamDetails"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_below="@id/listofClasses"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="-678dp"
-        android:backgroundTint="@color/lightpink"
-        android:text="@string/exam_details"
-        android:textColor="@color/white" />
+    <!-- To-Do List Section -->
+
+
 
     <TextView
         android:id="@+id/textViewTodoList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/listofAssignments"
+        android:layout_marginTop="30dp"
         android:text="@string/to_do_thelist"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:fontFamily="sans-serif-smallcaps"
-        android:layout_marginTop="550dp"
-        android:layout_marginStart="240dp" />
+        android:layout_marginStart="260dp" />
+
+    <ListView
+        android:id="@+id/listofTodo"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_below="@id/textViewTodoList"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/skyblue"/>
 
 
     <!-- Button to Navigate to To-Do List -->
@@ -129,15 +134,6 @@
         android:textColor="@color/black"
         android:textSize="22sp" />
 
-    <Button
-        android:id="@+id/buttonTodoList"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="220dp"
-        android:layout_marginTop="380dp"
-        android:backgroundTint="@color/skyblue"
-        android:text="@string/to_do_list"
-        android:textColor="@color/white" />
 
 
 </RelativeLayout>
