@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -99,15 +100,23 @@ public class ExamDetailsActivity extends AppCompatActivity {
                 String time = timeEditText.getText().toString();
                 String location = locationEditText.getText().toString();
 
-                String examDetail = name + " - " + date + " - " + time + " - " + location;
-                examSet.add(examDetail);
+                if (!(name.equals("") || date.equals("") || time.equals("") || location.equals(""))) {
 
-                SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putStringSet("exams", examSet);
-                editor.apply();
+                    String examDetail = name + " - " + date + " - " + time + " - " + location;
+                    examSet.add(examDetail);
 
-                examListAdapter.add(examDetail);
-                clearInputFields();
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putStringSet("exams", examSet);
+                    editor.apply();
+
+                    examListAdapter.add(examDetail);
+                    clearInputFields();
+                } else {
+                    CharSequence text = "You needa fill all dis out bum";
+                    int duration = Toast.LENGTH_LONG;
+                    Toast toast = Toast.makeText(ExamDetailsActivity.this, text, duration);
+                    toast.show();
+                }
             }
         });
 
@@ -135,6 +144,7 @@ public class ExamDetailsActivity extends AppCompatActivity {
                 int selectedItemPosition = examListView.getCheckedItemPosition();
                 if (selectedItemPosition != ListView.INVALID_POSITION) {
                     String selectedExam = examListAdapter.getItem(selectedItemPosition);
+
                     String[] examDetails = selectedExam.split(" - ");
                     nameEditText.setText(examDetails[0]);
                     dateEditText.setText(examDetails[1]);

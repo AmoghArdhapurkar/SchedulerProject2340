@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -83,15 +84,21 @@ public class TodoListActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String task = taskEditText.getText().toString();
+                if (!(task.equals(""))) {
+                    taskSet.add(task);
 
-                taskSet.add(task);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putStringSet("tasks", taskSet);
+                    editor.apply();
 
-                SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putStringSet("tasks", taskSet);
-                editor.apply();
-
-                todoListAdapter.add(task);
-                clearInputFields();
+                    todoListAdapter.add(task);
+                    clearInputFields();
+                } else {
+                    CharSequence text = "We can't add an empty task... silly goose";
+                    int duration = Toast.LENGTH_LONG;
+                    Toast toast = Toast.makeText(TodoListActivity.this, text, duration);
+                    toast.show();
+                }
             }
         });
 
