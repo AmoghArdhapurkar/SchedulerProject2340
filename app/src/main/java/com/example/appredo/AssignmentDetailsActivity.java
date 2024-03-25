@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -101,15 +102,23 @@ public final class AssignmentDetailsActivity extends AppCompatActivity {
                 String dueDate = dueDateEditText.getText().toString();
                 String associatedClass = associatedClassEditText.getText().toString();
 
-                String assignmentDetail = title + " - " + associatedClass + " - " + dueDate;
-                assignmentSet.add(assignmentDetail);
+                if (!(title.equals("") || dueDate.equals("") || associatedClass.equals(""))) {
 
-                SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putStringSet("assignments", assignmentSet);
-                editor.apply();
+                    String assignmentDetail = title + " - " + associatedClass + " - " + dueDate;
+                    assignmentSet.add(assignmentDetail);
 
-                assignmentListAdapter.add(assignmentDetail);
-                clearInputFields();
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putStringSet("assignments", assignmentSet);
+                    editor.apply();
+
+                    assignmentListAdapter.add(assignmentDetail);
+                    clearInputFields();
+                } else {
+                    CharSequence text = "You needa fill all dis out bum";
+                    int duration = Toast.LENGTH_LONG;
+                    Toast toast = Toast.makeText(AssignmentDetailsActivity.this, text, duration);
+                    toast.show();
+                }
             }
         });
 
