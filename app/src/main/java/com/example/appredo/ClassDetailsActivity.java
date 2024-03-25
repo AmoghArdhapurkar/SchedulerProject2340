@@ -96,22 +96,6 @@ public class ClassDetailsActivity extends AppCompatActivity {
                 String courseName = courseNameEditText.getText().toString();
                 String time = timeEditText.getText().toString();
                 String instructor = instructorEditText.getText().toString();
-                String classDetail = courseName + " - " + time + " - " + instructor;
-                classSet.add(classDetail);
-                SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putStringSet("classes", classSet);
-                editor.apply();
-                classListAdapter.add(classDetail);
-                clearInputFields();
-            }
-        });
-
-        deleteButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String courseName = courseNameEditText.getText().toString();
-                String time = timeEditText.getText().toString();
-                String instructor = instructorEditText.getText().toString();
                 if(!(courseName.equals("") || time.equals("") || instructor.equals(""))) {
                     String classDetail = courseName + " - " + time + " - " + instructor;
                     classSet.add(classDetail);
@@ -125,6 +109,22 @@ public class ClassDetailsActivity extends AppCompatActivity {
                     int duration = Toast.LENGTH_LONG;
                     Toast toast = Toast.makeText(ClassDetailsActivity.this, text, duration);
                     toast.show();
+                }
+            }
+        });
+
+        deleteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (selectedItemPosition != ListView.INVALID_POSITION) {
+                    String classDetail = classListAdapter.getItem(selectedItemPosition);
+                    classSet.remove(classDetail);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putStringSet("classes", classSet);
+                    editor.apply();
+                    classListAdapter.remove(classDetail);
+                    classListView.clearChoices();
+                    selectedItemPosition = ListView.INVALID_POSITION;
                 }
             }
         });
