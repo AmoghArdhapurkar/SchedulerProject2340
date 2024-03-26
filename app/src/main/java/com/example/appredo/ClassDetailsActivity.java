@@ -181,13 +181,6 @@ public class ClassDetailsActivity extends AppCompatActivity {
             }
         });
 
-//        Button backButton = findViewById(R.id.backButton);
-//        backButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(ClassDetailsActivity.this, MainActivity.class));
-//            }
-//        });
 
         ImageView imageView = findViewById(R.id.hamburgerButton);
         imageView.setOnClickListener(new View.OnClickListener(){
@@ -197,6 +190,12 @@ public class ClassDetailsActivity extends AppCompatActivity {
                 drawerLayout.openDrawer(GravityCompat.START);
             }
         });
+    }
+
+    public ArrayList<String> getDataFromSharedPreferences() {
+        SharedPreferences sharedPreferences = getSharedPreferences("ClassDetails", Context.MODE_PRIVATE);
+        Set<String> yourData = sharedPreferences.getStringSet("classes", new HashSet<>());
+        return new ArrayList<>(yourData);
     }
 
 

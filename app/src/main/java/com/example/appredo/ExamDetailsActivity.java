@@ -39,6 +39,7 @@ public class ExamDetailsActivity extends AppCompatActivity {
     private Button editButton;
     private Button sortButton;
     private ListView examListView;
+    private ListView examListMain;
     private ArrayAdapter<String> examListAdapter;
     private Set<String> examSet;
     private SharedPreferences sharedPreferences;
@@ -60,6 +61,7 @@ public class ExamDetailsActivity extends AppCompatActivity {
         editButton = findViewById(R.id.buttonEditExam);
         sortButton = findViewById(R.id.sortButton);
         examListView = findViewById(R.id.listViewExams);
+        examListMain = findViewById(R.id.listofExams);
 
         examListAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, new ArrayList<>(examSet));
         examListView.setAdapter(examListAdapter);
@@ -110,6 +112,7 @@ public class ExamDetailsActivity extends AppCompatActivity {
                     editor.apply();
 
                     examListAdapter.add(examDetail);
+
                     clearInputFields();
                 } else {
                     CharSequence text = "You needa fill all dis out bum";
@@ -211,4 +214,5 @@ public class ExamDetailsActivity extends AppCompatActivity {
         examListAdapter.clear();
         examListAdapter.addAll(examsList);
     }
+
 }
