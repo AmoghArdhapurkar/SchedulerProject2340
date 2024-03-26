@@ -105,7 +105,7 @@ public class ClassDetailsActivity extends AppCompatActivity {
                     classListAdapter.add(classDetail);
                     clearInputFields();
                 } else {
-                    CharSequence text = "You needa fill all dis out bum";
+                    CharSequence text = "Please fill all inputs";
                     int duration = Toast.LENGTH_LONG;
                     Toast toast = Toast.makeText(ClassDetailsActivity.this, text, duration);
                     toast.show();

@@ -115,7 +115,7 @@ public class ExamDetailsActivity extends AppCompatActivity {
 
                     clearInputFields();
                 } else {
-                    CharSequence text = "You needa fill all dis out bum";
+                    CharSequence text = "Please fill all inputs";
                     int duration = Toast.LENGTH_LONG;
                     Toast toast = Toast.makeText(ExamDetailsActivity.this, text, duration);
                     toast.show();
@@ -176,13 +176,6 @@ public class ExamDetailsActivity extends AppCompatActivity {
             }
         });
 
-//        Button backButton = findViewById(R.id.backButton);
-//        backButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(ExamDetailsActivity.this, MainActivity.class));
-//            }
-//        });
 
         ImageView imageView = findViewById(R.id.hamburgerButton);
         imageView.setOnClickListener(new View.OnClickListener(){

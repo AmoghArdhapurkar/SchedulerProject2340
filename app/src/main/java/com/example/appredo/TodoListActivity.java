@@ -94,7 +94,7 @@ public class TodoListActivity extends AppCompatActivity {
                     todoListAdapter.add(task);
                     clearInputFields();
                 } else {
-                    CharSequence text = "We can't add an empty task... silly goose";
+                    CharSequence text = "We can't add an empty task";
                     int duration = Toast.LENGTH_LONG;
                     Toast toast = Toast.makeText(TodoListActivity.this, text, duration);
                     toast.show();

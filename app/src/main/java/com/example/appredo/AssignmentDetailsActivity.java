@@ -114,7 +114,7 @@ public final class AssignmentDetailsActivity extends AppCompatActivity {
                     assignmentListAdapter.add(assignmentDetail);
                     clearInputFields();
                 } else {
-                    CharSequence text = "You needa fill all dis out bum";
+                    CharSequence text = "Please fill all inputs";
                     int duration = Toast.LENGTH_LONG;
                     Toast toast = Toast.makeText(AssignmentDetailsActivity.this, text, duration);
                     toast.show();
